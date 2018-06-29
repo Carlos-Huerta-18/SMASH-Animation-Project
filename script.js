@@ -10,22 +10,17 @@ function setup() {
   myName.html("Carlos");
 }
 
-mouseClicked = function(){
-  var x = 0;
-  draw = function() {
-       fill(mouseX, 0,mouseY);
-       ellipse(x,0,0,50);
-       x = x+100;
-  };
-};
-mouseDragged = function(){
-fill(mouseX, 0, mouseY);
-rect(mouseX,mouseY,mouseX,mouseY);
-ellipse(mouseX,mouseY,mouseY,mouseY);
-quad(mouseX,mouseY,mouseX,mouseX,mouseX,mouseX,mouseY,mouseY);
+var wSize = 10;
+var hSize = 10;
 
-};
+draw = function()  {
+    wSize = wSize + 1;
+    hSize = hSize + 1;
 
+    fill(mouseX,0, mouseY);
+    ellipse(mouseX,mouseY,100,100);
+    ellipse(mouseX,mouseY,100,100);
+};
 
 
 // create an animation function below, then call it in draw()
