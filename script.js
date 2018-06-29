@@ -7,13 +7,26 @@ function setup() {
   p5Canvas = createCanvas(800, 600);
   p5Canvas.parent("#p5-canvas");
   myName = select("#my-name");
-  myName.html("[Your Name Here]");
+  myName.html("Carlos");
 }
 
+mouseClicked = function(){
+  var x = 0;
+  draw = function() {
+       fill(mouseX, 0,mouseY);
+       ellipse(x,0,0,50);
+       x = x+100;
+  };
+};
+mouseDragged = function(){
+fill(mouseX, 0, mouseY);
+rect(mouseX,mouseY,mouseX,mouseY);
+ellipse(mouseX,mouseY,mouseY,mouseY);
+quad(mouseX,mouseY,mouseX,mouseX,mouseX,mouseX,mouseY,mouseY);
 
-function draw() {
-  background(0, 255, 0);
-}
+};
+
+
 
 // create an animation function below, then call it in draw()
 // see example.js if you need a place to start!

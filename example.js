@@ -17,7 +17,7 @@ function setup() {
   ballY = height / 2;
   ballRadius = 50;
   ballXVelocity = 10;
-  ballGrowth = 10;
+  ballGrowth = 20;
 }
 
 
@@ -25,6 +25,8 @@ function draw() {
   background(0, 255, 0);
   //drawSquares(random(30, 60)); // Uncomment this line for some fun!
   drawBall();
+  drawSquares(5);
+  drawSquaresAlt(5);
 }
 
 function drawBall() {
